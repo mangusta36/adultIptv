@@ -15,13 +15,13 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://iptv-adult-channels.com",
+        item: "https://www.iptvadults.net",
       },
       ...items.map((item, i) => ({
         "@type": "ListItem",
         position: i + 2,
         name: item.label,
-        ...(item.href ? { item: `https://iptv-adult-channels.com${item.href}` } : {}),
+        ...(item.href ? { item: `https://www.iptvadults.net${item.href}` } : {}),
       })),
     ],
   };

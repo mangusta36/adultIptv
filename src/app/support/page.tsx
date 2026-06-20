@@ -67,15 +67,15 @@ export default function SupportPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
-                <a
-                  href="https://wa.me/447828714977"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp Support
-                </a>
+                  <a
+                    href="https://wa.me/447828714977"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp Support
+                  </a>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/contact">Email Support</Link>
@@ -141,15 +141,15 @@ export default function SupportPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
-                <a
-                  href="https://wa.me/447828714977"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp
-                </a>
+                  <a
+                    href="https://wa.me/447828714977"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    WhatsApp
+                  </a>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/contact">Contact Us</Link>

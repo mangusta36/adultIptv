@@ -86,8 +86,8 @@ export default function PrivacyPage() {
               <h2 className="text-xl font-semibold text-foreground pt-6">8. Contact Us</h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <a href="mailto:support@iptvadult.com" className="text-accent hover:underline">
-                  support@iptvadult.com
+                <a href="mailto:support@iptvadults.net" className="text-accent hover:underline">
+                  support@iptvadults.net
                 </a>{" "}
                 or through our WhatsApp support line.
               </p>

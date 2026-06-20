@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "iptv adult channels",
   description:
     "iptv adult channels offers premium adult IPTV with 26,000+ live channels, 100,000+ VOD titles, 4K/8K streaming, and multi-device support on Firestick, Smart TV, Android, and iOS.",
-  url: "https://iptv-adult-channels.com",
-  twitterHandle: "@iptvadult",
+  url: "https://www.iptvadults.net",
+  twitterHandle: "@iptvadults",
 };
 
 export const navLinks = [

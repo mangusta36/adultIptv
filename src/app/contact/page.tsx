@@ -51,9 +51,9 @@ export default function ContactPage() {
                 {
                   icon: <Mail className="w-6 h-6" />,
                   label: "Email",
-                  value: "support@iptvadult.com",
+                  value: "support@iptvadults.net",
                   action: "Send Email",
-                  href: "mailto:support@iptvadult.com",
+                  href: "mailto:support@iptvadults.net",
                 },
                 {
                   icon: <Clock className="w-6 h-6" />,

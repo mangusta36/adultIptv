@@ -50,8 +50,8 @@ export default function RefundPage() {
                 To request a refund, simply <Link href="/contact" className="text-accent hover:underline">contact our support team</Link> within 7 days of your purchase
                 date. Browse our <Link href="/pricing" className="text-accent hover:underline">adult IPTV subscription plans</Link> with confidence — every plan
                 includes this 7-day money-back guarantee. Reach us via email at{" "}
-                <a href="mailto:support@iptvadult.com" className="text-accent hover:underline">
-                  support@iptvadult.com
+                <a href="mailto:support@iptvadults.net" className="text-accent hover:underline">
+                  support@iptvadults.net
                 </a>{" "}
                 or through our <Link href="/support" className="text-accent hover:underline">24/7 support center</Link>. Include your account email and the reason for
                 your refund request.
