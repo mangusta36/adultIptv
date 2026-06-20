@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(229,9,20,0.12)"/>
+      <stop offset="100%" stop-color="rgba(229,9,20,0)"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E50914"/>
+      <stop offset="100%" stop-color="#ff4444"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="glowCard">
+      <feDropShadow dx="0" dy="2" stdDeviation="8" flood-color="rgba(229,9,20,0.08)"/>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="56" fill="#080808" opacity="0.9"/>
+  <rect x="24" y="16" width="24" height="24" rx="6" fill="#E50914"/>
+  <rect x="56" y="16" width="80" height="24" rx="0" fill="none"/>
+  <text x="62" y="33" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#fff">IPTV</text>
+  <text x="98" y="33" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#71717a">Adult</text>
+
+  <!-- Search bar -->
+  <rect x="280" y="14" width="240" height="28" rx="14" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="296" y="33" font-family="system-ui, sans-serif" font-size="12" fill="#52525b">Search channels...</text>
+
+  <!-- Status indicators -->
+  <circle cx="620" cy="28" r="4" fill="#22c55e"/>
+  <text x="632" y="32" font-family="system-ui, sans-serif" font-size="11" fill="#71717a">All Systems Online</text>
+
+  <circle cx="740" cy="28" r="4" fill="#E50914"/>
+  <text x="752" y="32" font-family="system-ui, sans-serif" font-size="11" fill="#71717a">Live</text>
+
+  <!-- Main content -->
+  <!-- Stats cards row -->
+  <text x="24" y="88" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#fff">Dashboard</text>
+  <text x="24" y="106" font-family="system-ui, sans-serif" font-size="11" fill="#71717a">Real-time streaming overview</text>
+
+  <!-- Stat card 1 -->
+  <rect x="24" y="128" width="176" height="80" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <text x="40" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#71717a" font-weight="500">CHANNELS ONLINE</text>
+  <text x="40" y="178" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#fff">12,847</text>
+  <rect x="40" y="190" width="60" height="3" rx="1.5" fill="url(#bar)"/>
+
+  <!-- Stat card 2 -->
+  <rect x="212" y="128" width="176" height="80" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <text x="228" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#71717a" font-weight="500">STREAMING NOW</text>
+  <text x="228" y="178" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#fff">3,421</text>
+  <rect x="228" y="190" width="40" height="3" rx="1.5" fill="url(#barBlue)"/>
+
+  <!-- Stat card 3 -->
+  <rect x="400" y="128" width="176" height="80" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <text x="416" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#71717a" font-weight="500">AVG BITRATE</text>
+  <text x="416" y="178" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#fff">52 Mbps</text>
+  <rect x="416" y="190" width="50" height="3" rx="1.5" fill="url(#bar)"/>
+
+  <!-- Stat card 4 -->
+  <rect x="588" y="128" width="188" height="80" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <text x="604" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#71717a" font-weight="500">UPTIME</text>
+  <text x="604" y="178" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#22c55e">99.99%</text>
+  <rect x="604" y="190" width="80" height="3" rx="1.5" fill="url(#barGreen)"/>
+
+  <!-- Channel cards section -->
+  <text x="24" y="240" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#fff">Live Channels</text>
+
+  <!-- Channel 1 -->
+  <rect x="24" y="256" width="370" height="104" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="40" y="272" width="80" height="48" rx="8" fill="#E50914" opacity="0.15"/>
+  <rect x="40" y="272" width="80" height="48" rx="8" fill="none" stroke="#E50914" stroke-width="0.5" opacity="0.3"/>
+  <text x="58" y="298" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#E50914">PREMIUM</text>
+  <text x="58" y="312" font-family="system-ui, sans-serif" font-size="8" fill="#E50914" opacity="0.7">HD</text>
+  <text x="136" y="290" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">Premium HD Plus</text>
+  <text x="136" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#71717a">8,421 watching</text>
+  <text x="136" y="324" font-family="system-ui, sans-serif" font-size="10" fill="#E50914">&#9679; Live</text>
+  <rect x="40" y="340" width="338" height="3" rx="1.5" fill="#1f1f1f"/>
+  <rect x="40" y="340" width="220" height="3" rx="1.5" fill="url(#bar)"/>
+
+  <!-- Channel 2 -->
+  <rect x="406" y="256" width="370" height="104" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1" filter="url(#shadow)"/>
+  <rect x="422" y="272" width="80" height="48" rx="8" fill="#E50914" opacity="0.12"/>
+  <rect x="422" y="272" width="80" height="48" rx="8" fill="none" stroke="#E50914" stroke-width="0.5" opacity="0.2"/>
+  <text x="438" y="298" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#E50914">ULTRA HD</text>
+  <text x="444" y="312" font-family="system-ui, sans-serif" font-size="8" fill="#E50914" opacity="0.7">4K</text>
+  <text x="518" y="290" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#fff">4K Ultra Cinema</text>
+  <text x="518" y="308" font-family="system-ui, sans-serif" font-size="11" fill="#71717a">5,203 watching</text>
+  <text x="518" y="324" font-family="system-ui, sans-serif" font-size="10" fill="#E50914">&#9679; Live</text>
+  <rect x="422" y="340" width="338" height="3" rx="1.5" fill="#1f1f1f"/>
+  <rect x="422" y="340" width="280" height="3" rx="1.5" fill="url(#bar)"/>
+
+  <!-- Bottom row - bandwidth and server stats -->
+  <rect x="24" y="380" width="370" height="100" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1"/>
+  <text x="40" y="402" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Bandwidth Usage</text>
+  <text x="338" y="402" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff">52 Mbps</text>
+  <rect x="40" y="416" width="338" height="6" rx="3" fill="#1f1f1f"/>
+  <rect x="40" y="416" width="240" height="6" rx="3" fill="url(#bar)"/>
+
+  <rect x="40" y="436" width="160" height="12" rx="6" fill="#1f1f1f"/>
+  <text x="48" y="445" font-family="system-ui, sans-serif" font-size="9" fill="#71717a">Download: 52 Mbps</text>
+  <rect x="218" y="436" width="160" height="12" rx="6" fill="#1f1f1f"/>
+  <text x="226" y="445" font-family="system-ui, sans-serif" font-size="9" fill="#71717a">Upload: 12 Mbps</text>
+
+  <rect x="40" y="456" width="338" height="1" rx="0.5" fill="#1f1f1f"/>
+
+  <text x="40" y="474" font-family="system-ui, sans-serif" font-size="10" fill="#71717a">Server: Amsterdam (EU-West)</text>
+  <text x="200" y="474" font-family="system-ui, sans-serif" font-size="10" fill="#22c55e">&#9679; 12ms latency</text>
+  <text x="320" y="474" font-family="system-ui, sans-serif" font-size="10" fill="#71717a">Uptime: 99.99%</text>
+
+  <!-- Right panel - Top channels -->
+  <rect x="406" y="380" width="370" height="100" rx="12" fill="url(#card)" stroke="#1f1f1f" stroke-width="1"/>
+  <text x="422" y="402" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fff">Top Categories</text>
+
+  <!-- Category tags -->
+  <rect x="422" y="416" width="108" height="24" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <text x="440" y="432" font-family="system-ui, sans-serif" font-size="10" fill="#e4e4e7">&#9679; Premium</text>
+
+  <rect x="540" y="416" width="100" height="24" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <text x="558" y="432" font-family="system-ui, sans-serif" font-size="10" fill="#e4e4e7">&#9679; 4K Ultra</text>
+
+  <rect x="422" y="448" width="100" height="24" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <text x="440" y="464" font-family="system-ui, sans-serif" font-size="10" fill="#e4e4e7">&#9679; VOD Picks</text>
+
+  <rect x="532" y="448" width="110" height="24" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="0.5"/>
+  <text x="550" y="464" font-family="system-ui, sans-serif" font-size="10" fill="#e4e4e7">&#9679; Live Sports</text>
+
+  <!-- Bottom navigation bar -->
+  <rect x="0" y="556" width="800" height="44" fill="#080808"/>
+  <rect x="300" y="566" width="60" height="2" rx="1" fill="#E50914"/>
+  <text x="310" y="580" font-family="system-ui, sans-serif" font-size="9" fill="#E50914" text-anchor="middle" font-weight="600">CHANNELS</text>
+  <text x="430" y="580" font-family="system-ui, sans-serif" font-size="9" fill="#52525b" text-anchor="middle">VOD</text>
+  <text x="530" y="580" font-family="system-ui, sans-serif" font-size="9" fill="#52525b" text-anchor="middle">FAVORITES</text>
+  <text x="180" y="580" font-family="system-ui, sans-serif" font-size="9" fill="#52525b" text-anchor="middle">HOME</text>
+  <text x="630" y="580" font-family="system-ui, sans-serif" font-size="9" fill="#52525b" text-anchor="middle">SETTINGS</text>
+</svg>
