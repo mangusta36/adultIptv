@@ -57,7 +57,7 @@ export default function SupportPreview() {
           </Button>
           <Button variant="outline" asChild>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/447828714977"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

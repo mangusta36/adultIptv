@@ -57,7 +57,7 @@ export default function Footer() {
               </Link>
               <span className="text-muted">|</span>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/447828714977"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-accent hover:text-accent-hover transition-colors font-medium"

@@ -86,7 +86,7 @@ export default function Pricing() {
                 asChild
               >
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/447828714977"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

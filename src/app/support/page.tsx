@@ -68,7 +68,7 @@ export default function SupportPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/447828714977"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
@@ -142,7 +142,7 @@ export default function SupportPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/447828714977"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"

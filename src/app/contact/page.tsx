@@ -46,7 +46,7 @@ export default function ContactPage() {
                   label: "WhatsApp",
                   value: "+1 (234) 567-890",
                   action: "Send Message",
-                  href: "https://wa.me/1234567890",
+                  href: "https://wa.me/447828714977",
                 },
                 {
                   icon: <Mail className="w-6 h-6" />,
