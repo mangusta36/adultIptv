@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/data";
+import { siteConfig, whatsappUrl } from "@/data";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Mail, Clock, Shield } from "lucide-react";
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
                   label: "WhatsApp",
                   value: "+1 (234) 567-890",
                   action: "Send Message",
-                  href: "https://wa.me/447828714977",
+                  href: whatsappUrl,
                 },
                 {
                   icon: <Mail className="w-6 h-6" />,

@@ -6,6 +6,11 @@ export const siteConfig = {
   twitterHandle: "@iptvadults",
 };
 
+const whatsappMessage =
+  "Hi, I'm interested in IPTV. Can you send me the available plans?";
+
+export const whatsappUrl = `https://wa.me/447828714977?text=${encodeURIComponent(whatsappMessage)}`;
+
 export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/features", label: "Features" },

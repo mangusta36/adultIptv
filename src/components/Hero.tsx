@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { heroBadge, heroHeadline, heroDescription, heroTrust } from "@/data";
+import { heroBadge, heroHeadline, heroDescription, heroTrust, whatsappUrl } from "@/data";
 import { Check, Shield, Zap, HeadphonesIcon } from "lucide-react";
 const trustIcons = [Check, Shield, Zap, HeadphonesIcon] as const;
 
@@ -51,7 +51,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-3.5 sm:gap-4 mb-10 md:mb-12">
             <Button size="xl" asChild>
-              <a href="#cta">Get Started</a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Get Started</a>
             </Button>
             <Button size="xl" variant="outline" asChild>
               <a href="#pricing">View Plans</a>

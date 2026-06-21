@@ -1,4 +1,4 @@
-import { plans } from "@/data";
+import { plans, whatsappUrl } from "@/data";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Zap, CreditCard } from "lucide-react";
 
@@ -86,7 +86,7 @@ export default function Pricing() {
                 asChild
               >
                 <a
-                  href="https://wa.me/447828714977"
+                  href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

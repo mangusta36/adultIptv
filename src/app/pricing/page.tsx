@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, Shield, CreditCard, HeadsetIcon, ArrowRight } from "lucide-react";
-import { plans, siteConfig, testimonials } from "@/data";
+import { plans, siteConfig, testimonials, whatsappUrl } from "@/data";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -147,7 +147,7 @@ export default function PricingPage() {
                   asChild
                 >
                   <a
-                    href="https://wa.me/447828714977"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

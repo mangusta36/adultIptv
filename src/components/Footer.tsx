@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig } from "@/data";
+import { siteConfig, whatsappUrl } from "@/data";
 
 const footerLinks = {
   company: [
@@ -57,7 +57,7 @@ export default function Footer() {
               </Link>
               <span className="text-muted">|</span>
               <a
-                href="https://wa.me/447828714977"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-accent hover:text-accent-hover transition-colors font-medium"

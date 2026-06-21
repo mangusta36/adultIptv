@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
+import { whatsappUrl } from "@/data";
 
 export default function CTA() {
   return (
@@ -25,7 +26,7 @@ export default function CTA() {
             </Button>
             <Button size="xl" variant="outline" asChild>
               <a
-                href="https://wa.me/447828714977"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"

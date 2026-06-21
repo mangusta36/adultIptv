@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { supportCategories, faqSupport } from "@/data/support";
-import { siteConfig } from "@/data";
+import { siteConfig, whatsappUrl } from "@/data";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, BookOpen, Download, Wrench, User, ChevronRight } from "lucide-react";
@@ -68,7 +68,7 @@ export default function SupportPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
                   <a
-                    href="https://wa.me/447828714977"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
@@ -142,7 +142,7 @@ export default function SupportPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild>
                   <a
-                    href="https://wa.me/447828714977"
+                    href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

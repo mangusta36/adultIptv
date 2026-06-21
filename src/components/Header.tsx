@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X, Home, Sparkles, DollarSign, BookOpen, HeadphonesIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { navLinks } from "@/data";
+import { navLinks, whatsappUrl } from "@/data";
 import { cn } from "@/lib/utils";
 
 const mobileIcons: Record<string, React.ReactNode> = {
@@ -110,7 +110,7 @@ export default function Header() {
               <Link href="/pricing">View Plans</Link>
             </Button>
             <Button size="sm" asChild>
-              <Link href="/pricing">Get Started</Link>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">Get Started</a>
             </Button>
           </div>
 
@@ -178,9 +178,7 @@ export default function Header() {
             <div className="px-3 pt-3 border-t border-border mx-3">
               <div className="flex flex-col gap-2">
                 <Button className="w-full" asChild>
-                  <Link href="/pricing" onClick={() => setIsOpen(false)}>
-                    Get Started
-                  </Link>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Get Started</a>
                 </Button>
                 <Button variant="outline" className="w-full" asChild>
                   <Link href="/pricing" onClick={() => setIsOpen(false)}>

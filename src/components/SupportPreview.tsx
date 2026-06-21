@@ -7,6 +7,7 @@ import {
   Wrench,
   ArrowRight,
 } from "lucide-react";
+import { whatsappUrl } from "@/data";
 import { supportCategories } from "@/data/support";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -57,7 +58,7 @@ export default function SupportPreview() {
           </Button>
           <Button variant="outline" asChild>
             <a
-              href="https://wa.me/447828714977"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
