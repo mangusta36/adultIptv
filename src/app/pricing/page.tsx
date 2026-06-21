@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, Shield, CreditCard, HeadsetIcon, ArrowRight } from "lucide-react";
-import { plans, siteConfig } from "@/data";
+import { plans, siteConfig, testimonials } from "@/data";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -20,11 +20,21 @@ export const metadata: Metadata = {
   },
 };
 
+const totalRating = testimonials.reduce((sum, t) => sum + t.rating, 0);
+const avgRating = (totalRating / testimonials.length).toFixed(1);
+
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": `${siteConfig.url}/#product`,
   name: "Premium IPTV Subscription",
   description: "Access premium adult IPTV channels, live global channels, and a huge VOD library.",
+  image: `${siteConfig.url}/apple-icon.svg`,
+  brand: {
+    "@type": "Brand",
+    name: "iptv adult channels",
+  },
+  category: "Entertainment Subscription",
   offers: plans.map((plan) => ({
     "@type": "Offer",
     name: plan.name,
@@ -33,7 +43,21 @@ const pricingSchema = {
     priceValidUntil: "2027-12-31",
     description: plan.description,
     url: `${siteConfig.url}/pricing`,
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    seller: {
+      "@type": "Organization",
+      name: "iptv adult channels",
+      url: siteConfig.url,
+    },
   })),
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: avgRating,
+    reviewCount: testimonials.length,
+    bestRating: "5",
+    worstRating: "1",
+  },
 };
 
 export default function PricingPage() {

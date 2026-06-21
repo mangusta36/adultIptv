@@ -1,62 +1,36 @@
-import { ImageResponse } from "next/og";
-
 export const size = {
   width: 1200,
   height: 630,
 };
 
-export const contentType = "image/png";
+export const contentType = "image/svg+xml";
 
 export default async function TwitterImage() {
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          background: "linear-gradient(135deg, #050505 0%, #0B0B0B 50%, #050505 100%)",
-          padding: "80px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-        >
-          <h1
-            style={{
-              color: "#FFFFFF",
-              fontSize: "56px",
-              fontWeight: 700,
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              margin: 0,
-            }}
-          >
-            Adult IPTV Channels
-            <br />
-            Premium HD, 4K & 8K
-          </h1>
-          <p
-            style={{
-              color: "#A1A1AA",
-              fontSize: "24px",
-              margin: 0,
-              marginTop: "8px",
-            }}
-          >
-            25,000+ Channels · 4K/8K Streaming · 99.9% Uptime · 24/7 Support
-          </p>
-        </div>
-      </div>
-    ),
+  return new Response(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#050505"/>
+          <stop offset="50%" stop-color="#0B0B0B"/>
+          <stop offset="100%" stop-color="#050505"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="630" fill="url(#bg)"/>
+      <text x="80" y="220" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF" letter-spacing="-1">
+        <tspan x="80" dy="0">Adult IPTV Channels</tspan>
+        <tspan x="80" dy="66">Premium HD, 4K &amp; 8K</tspan>
+      </text>
+      <text x="80" y="340" font-family="system-ui, sans-serif" font-size="24" fill="#A1A1AA">25,000+ Channels · 4K/8K Streaming · 99.9% Uptime · 24/7 Support</text>
+    </svg>`,
     {
-      ...size,
+      headers: {
+        "content-type": "image/svg+xml",
+        "cache-control":
+          process.env.NODE_ENV === "development"
+            ? "no-cache, no-store"
+            : "public, immutable, no-transform, max-age=31536000",
+      },
+      status: 200,
     },
   );
 }
