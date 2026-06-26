@@ -1,6 +1,9 @@
-import { plans, whatsappUrl } from "@/data";
+import { plans } from "@/data";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Zap, CreditCard } from "lucide-react";
+
+const waMsg = (name: string, price: string) =>
+  `https://wa.me/447828714977?text=${encodeURIComponent(`Hi! I'd like to buy the ${name} IPTV plan for ${price}.`)}`;
 
 const badges = [
   { icon: Shield, label: "Money Back Guarantee", desc: "7-day full refund" },
@@ -86,7 +89,7 @@ export default function Pricing() {
                 asChild
               >
                 <a
-                  href={whatsappUrl}
+                  href={waMsg(plan.name, plan.price)}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
