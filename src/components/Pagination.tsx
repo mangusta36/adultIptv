@@ -1,8 +1,15 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+function pageHref(baseUrl: string, searchParams: URLSearchParams, page: number): string {
+  const params = new URLSearchParams(searchParams.toString());
+  params.set("page", page.toString());
+  return `${baseUrl}?${params.toString()}`;
+}
 
 export default function Pagination({
   currentPage,
@@ -13,14 +20,7 @@ export default function Pagination({
   totalPages: number;
   baseUrl: string;
 }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
-
-  const goToPage = (page: number) => {
-    const params = new URLSearchParams(searchParams.toString());
-    params.set("page", page.toString());
-    router.push(`${baseUrl}?${params.toString()}`);
-  };
 
   if (totalPages <= 1) return null;
 
@@ -29,15 +29,19 @@ export default function Pagination({
       aria-label="Pagination"
       className="flex items-center justify-center gap-2 mt-12"
     >
-      <Button
-        variant="ghost"
-        size="sm"
-        disabled={currentPage <= 1}
-        onClick={() => goToPage(currentPage - 1)}
-      >
-        <ChevronLeft className="w-4 h-4 mr-1" />
-        Previous
-      </Button>
+      {currentPage > 1 ? (
+        <Button variant="ghost" size="sm" asChild>
+          <Link href={pageHref(baseUrl, searchParams, currentPage - 1)}>
+            <ChevronLeft className="w-4 h-4 mr-1" />
+            Previous
+          </Link>
+        </Button>
+      ) : (
+        <Button variant="ghost" size="sm" disabled>
+          <ChevronLeft className="w-4 h-4 mr-1" />
+          Previous
+        </Button>
+      )}
 
       {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
         <Button
@@ -45,21 +49,25 @@ export default function Pagination({
           variant={page === currentPage ? "default" : "ghost"}
           size="sm"
           className="w-9 h-9 p-0"
-          onClick={() => goToPage(page)}
+          asChild
         >
-          {page}
+          <Link href={pageHref(baseUrl, searchParams, page)}>{page}</Link>
         </Button>
       ))}
 
-      <Button
-        variant="ghost"
-        size="sm"
-        disabled={currentPage >= totalPages}
-        onClick={() => goToPage(currentPage + 1)}
-      >
-        Next
-        <ChevronRight className="w-4 h-4 ml-1" />
-      </Button>
+      {currentPage < totalPages ? (
+        <Button variant="ghost" size="sm" asChild>
+          <Link href={pageHref(baseUrl, searchParams, currentPage + 1)}>
+            Next
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </Button>
+      ) : (
+        <Button variant="ghost" size="sm" disabled>
+          Next
+          <ChevronRight className="w-4 h-4 ml-1" />
+        </Button>
+      )}
     </nav>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
+import { siteConfig } from "@/data";
 
 export interface BreadcrumbItem {
   label: string;
@@ -15,13 +16,13 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.iptvadults.net",
+        item: siteConfig.url,
       },
       ...items.map((item, i) => ({
         "@type": "ListItem",
         position: i + 2,
         name: item.label,
-        ...(item.href ? { item: `https://www.iptvadults.net${item.href}` } : {}),
+        ...(item.href ? { item: `${siteConfig.url}${item.href}` } : {}),
       })),
     ],
   };

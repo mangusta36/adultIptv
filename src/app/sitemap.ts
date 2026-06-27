@@ -2,8 +2,14 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/data";
 import { blogPosts } from "@/data/blog";
 
+interface SitemapEntry {
+  url: string;
+  priority: number;
+  lastModified?: Date;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = [
+  const staticPages: SitemapEntry[] = [
     { url: siteConfig.url, priority: 1 },
     { url: `${siteConfig.url}/features`, priority: 0.9 },
     { url: `${siteConfig.url}/pricing`, priority: 0.9 },
@@ -28,13 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = blogPosts.map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
     priority: 0.6 as const,
   }));
 
   return [...staticPages, ...blogPages].map((page) => ({
     url: page.url,
-    lastModified: new Date(),
+    lastModified: page.lastModified ?? new Date(),
     changeFrequency: "weekly" as const,
     priority: page.priority,
-}));
+  }));
 }

@@ -140,11 +140,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       authors: [post.author],
       url: `${siteConfig.url}/blog/${post.slug}`,
+      images: [
+        {
+          url: post.image.startsWith("http") ? post.image : `${siteConfig.url}${post.image}`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${post.title} | iptv adult channels Blog`,
       description: post.excerpt,
+      images: [
+        post.image.startsWith("http") ? post.image : `${siteConfig.url}${post.image}`,
+      ],
     },
     alternates: {
       canonical: `${siteConfig.url}/blog/${post.slug}`,
@@ -164,9 +175,11 @@ export default async function BlogArticlePage({ params }: Props) {
 
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.title,
     description: post.excerpt,
+    image: post.image.startsWith("http") ? post.image : `${siteConfig.url}${post.image}`,
+    url: `${siteConfig.url}/blog/${post.slug}`,
     author: { "@type": "Person", name: post.author },
     datePublished: post.date,
     dateModified: post.date,
@@ -174,6 +187,10 @@ export default async function BlogArticlePage({ params }: Props) {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`,
     },
   };
 

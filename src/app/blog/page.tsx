@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     description:
       "Expert adult IPTV guides and tutorials. Setup Firestick, Smart TV, Android, iOS. Privacy tips, buffering fixes, and channel recommendations.",
     url: `${siteConfig.url}/blog`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iptv adult channels — IPTV Guides & Setup Tips",
+    description:
+      "Expert adult IPTV guides and tutorials. Setup Firestick, Smart TV, Android, iOS. Privacy tips, buffering fixes, and channel recommendations.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/blog`,
@@ -60,6 +75,12 @@ export default async function BlogPage(props: {
 
   return (
     <>
+      {currentPage > 1 && (
+        <link rel="prev" href={`/blog?page=${currentPage - 1}`} />
+      )}
+      {currentPage < totalPages && (
+        <link rel="next" href={`/blog?page=${currentPage + 1}`} />
+      )}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.03] to-background pointer-events-none" />
         <div className="container relative z-10">

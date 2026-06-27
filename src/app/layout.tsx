@@ -105,9 +105,19 @@ const organizationSchema = {
     contactType: "customer service",
     availableLanguage: ["English"],
   },
-  sameAs: [
-    "#",
-  ],
+  sameAs: [] as string[],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  publisher: {
+    "@type": "Organization",
+    name: siteConfig.name,
+    url: siteConfig.url,
+  },
 };
 
 export default function RootLayout({
@@ -126,6 +136,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>
