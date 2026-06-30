@@ -42,7 +42,9 @@ function renderContent(content: string) {
   const html: string[] = [];
   let inList = false;
   let inCodeBlock = false;
+  let inTable = false;
   let listType = "ul";
+  let tableHeaders: string[] = [];
   const seenIds = new Map<string, number>();
 
   function uniqueId(text: string): string {
@@ -52,12 +54,24 @@ function renderContent(content: string) {
     return count === 0 ? baseId : `${baseId}-${count}`;
   }
 
+  function closeOpenTags() {
+    if (inList) {
+      html.push(listType === "ul" ? "</ul>" : "</ol>");
+      inList = false;
+    }
+    if (inTable) {
+      html.push("</tbody></table>");
+      inTable = false;
+    }
+  }
+
   for (const line of lines) {
     if (line.startsWith("```")) {
       if (inCodeBlock) {
         html.push("</code></pre>");
         inCodeBlock = false;
       } else {
+        closeOpenTags();
         html.push("<pre class='bg-card border border-border rounded-xl p-4 my-4 overflow-x-auto text-sm'><code>");
         inCodeBlock = true;
       }
@@ -72,15 +86,40 @@ function renderContent(content: string) {
     const trimmed = line.trim();
 
     if (trimmed.startsWith("#### ")) {
+      closeOpenTags();
       const text = trimmed.slice(5);
       html.push(`<h4 id="${uniqueId(text)}" class="text-base font-semibold mt-6 mb-2">${inlineMarkdown(text)}</h4>`);
     } else if (trimmed.startsWith("### ")) {
+      closeOpenTags();
       const text = trimmed.slice(4);
       html.push(`<h3 id="${uniqueId(text)}" class="text-lg font-semibold mt-8 mb-3">${inlineMarkdown(text)}</h3>`);
     } else if (trimmed.startsWith("## ")) {
+      closeOpenTags();
       const text = trimmed.slice(3);
       html.push(`<h2 id="${uniqueId(text)}" class="text-xl font-semibold mt-10 mb-4">${inlineMarkdown(text)}</h2>`);
+    } else if (/^\|.+\|$/.test(trimmed)) {
+      const cells = trimmed.split("|").filter((c) => c.trim().length > 0).map((c) => c.trim());
+      if (cells.every((c) => /^[-:\s]+$/.test(c))) {
+        continue;
+      }
+      if (!inTable) {
+        tableHeaders = cells;
+        inTable = true;
+        html.push('<div class="overflow-x-auto my-6"><table class="w-full text-sm border-collapse">');
+        html.push("<thead><tr>");
+        for (const cell of cells) {
+          html.push(`<th class="border border-border bg-card px-4 py-2 text-left font-semibold">${inlineMarkdown(cell)}</th>`);
+        }
+        html.push("</tr></thead><tbody>");
+      } else {
+        html.push("<tr>");
+        for (const cell of cells) {
+          html.push(`<td class="border border-border px-4 py-2 text-muted">${inlineMarkdown(cell)}</td>`);
+        }
+        html.push("</tr>");
+      }
     } else if (trimmed.startsWith("- ")) {
+      closeOpenTags();
       if (!inList) {
         html.push("<ul class='space-y-2 my-3 list-disc list-inside text-muted'>");
         inList = true;
@@ -88,6 +127,7 @@ function renderContent(content: string) {
       }
       html.push(`<li class="text-muted">${inlineMarkdown(trimmed.slice(2))}</li>`);
     } else if (/^\d+\.\s/.test(trimmed)) {
+      closeOpenTags();
       if (!inList) {
         html.push("<ol class='space-y-2 my-3 list-decimal list-inside text-muted'>");
         inList = true;
@@ -95,28 +135,24 @@ function renderContent(content: string) {
       }
       html.push(`<li class="text-muted">${inlineMarkdown(trimmed.replace(/^\d+\.\s/, ""))}</li>`);
     } else if (/^!\[([^\]]+)\]\(([^)]+)\)$/.test(trimmed)) {
+      closeOpenTags();
       const match = trimmed.match(/^!\[([^\]]+)\]\(([^)]+)\)$/);
       if (match) {
         const imgAlt = match[1];
         const imgSrc = match[2];
-        html.push(`<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" class="w-full rounded-xl my-8 object-cover" />`);
+        html.push(`<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" width="800" height="450" class="w-full rounded-xl my-8 object-cover" />`);
       }
     } else if (trimmed.startsWith("> ")) {
+      closeOpenTags();
       html.push(`<blockquote class="border-l-2 border-accent/50 pl-4 my-4 text-muted italic">${inlineMarkdown(trimmed.slice(2))}</blockquote>`);
     } else if (trimmed === "") {
-      if (inList) {
-        html.push(listType === "ul" ? "</ul>" : "</ol>");
-        inList = false;
-      }
+      closeOpenTags();
     } else {
-      if (inList) {
-        html.push(listType === "ul" ? "</ul>" : "</ol>");
-        inList = false;
-      }
+      closeOpenTags();
       html.push(`<p class="text-muted leading-relaxed">${inlineMarkdown(trimmed)}</p>`);
     }
   }
-  if (inList) html.push(listType === "ul" ? "</ul>" : "</ol>");
+  closeOpenTags();
 
   return html.join("\n");
 }

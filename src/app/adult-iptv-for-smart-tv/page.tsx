@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Watch premium adult IPTV on your Smart TV with iptv adult channels. Full support for Samsung, LG, Sony, and Android TV. 4K streaming with easy setup. Subscribe and start watching instantly.",
     url: `${siteConfig.url}/adult-iptv-for-smart-tv`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — adult iptv for smart tv" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV for Smart TV — iptv adult channels Setup",
+    description: "Watch premium adult IPTV on your Smart TV with iptv adult channels. Full support for Samsung, LG, Sony, and Android TV. 4K streaming with easy setup. Subscribe and start watching instantly.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/adult-iptv-for-smart-tv` },
 };

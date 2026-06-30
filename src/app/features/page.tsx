@@ -11,6 +11,20 @@ export const metadata: Metadata = {
     title: "iptv adult channels — Premium IPTV Features",
     description: "Explore iptv adult channels features — 4K & 8K streaming, buffer-free playback, multi-device support, and 24/7 expert help.",
     url: `${siteConfig.url}/features`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels premium features",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iptv adult channels — Premium IPTV Features",
+    description: "Explore iptv adult channels features — 4K & 8K streaming, buffer-free playback, multi-device support, and 24/7 expert help.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/features`,
@@ -37,7 +51,7 @@ const extendedFeatures = [
     icon: <Zap className="w-8 h-8" />,
     title: "Instant Channel Switching",
     description:
-      "Switch between 25,000+ channels instantly with iptv adult channels. Near-zero latency and optimized infrastructure ensure you never miss a moment.",
+      "Switch between 26,000+ channels instantly with iptv adult channels. Near-zero latency and optimized infrastructure ensure you never miss a moment.",
   },
   {
     icon: <Layers className="w-8 h-8" />,
@@ -48,9 +62,9 @@ const extendedFeatures = [
 ];
 
 const comparisons = [
-  { feature: "Live Channels", us: "25,000+", cable: "200-500", others: "5,000-10,000" },
+  { feature: "Live Channels", us: "26,000+", cable: "200-500", others: "5,000-10,000" },
   { feature: "Max Quality", us: "8K", cable: "HD", others: "4K" },
-  { feature: "VOD Library", us: "50,000+", cable: "Limited", others: "10,000-20,000" },
+  { feature: "VOD Library", us: "100,000+", cable: "Limited", others: "10,000-20,000" },
   { feature: "Device Support", us: "All Devices", cable: "TV Only", others: "Limited" },
   { feature: "Uptime", us: "99.9%", cable: "95-99%", others: "97-99%" },
   { feature: "Support", us: "24/7 Priority", cable: "Business Hours", others: "Email Only" },
@@ -166,8 +180,8 @@ export default function FeaturesPage() {
               {
                 title: "What iptv adult channels Includes",
                 items: [
-                  "25,000+ live channels worldwide",
-                  "50,000+ VOD titles",
+                  "26,000+ live channels worldwide",
+                  "100,000+ VOD titles",
                   "HD, 4K & 8K streaming",
                   "Anti-freeze technology",
                   "7-day EPG (Electronic Program Guide)",

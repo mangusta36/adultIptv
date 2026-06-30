@@ -33,6 +33,8 @@ function ChannelLogo({ channel }: { channel: Channel }) {
         <img
           src={channel.file}
           alt={`${channel.name} logo`}
+          width="120"
+          height="32"
           className="max-h-8 w-auto brightness-0 invert"
           loading="lazy"
         />
@@ -40,6 +42,8 @@ function ChannelLogo({ channel }: { channel: Channel }) {
         <img
           src={channel.file}
           alt={`${channel.name} logo`}
+          width="120"
+          height="32"
           className="max-h-8 w-auto"
           loading="lazy"
         />

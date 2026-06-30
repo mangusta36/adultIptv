@@ -13,6 +13,21 @@ export const metadata: Metadata = {
     description:
       "Need help? Contact iptv adult channels support team. Available 24/7 via WhatsApp, email, and live chat for all your IPTV questions. Fast, friendly, and expert customer service.",
     url: `${siteConfig.url}/contact`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Contact iptv adult channels support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact iptv adult channels — Support & Help",
+    description:
+      "Need help? Contact iptv adult channels support team. Available 24/7 via WhatsApp, email, and live chat.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/contact`,
@@ -44,7 +59,7 @@ export default function ContactPage() {
                 {
                   icon: <MessageCircle className="w-6 h-6" />,
                   label: "WhatsApp",
-                  value: "+1 (234) 567-890",
+                  value: "Fast & Direct",
                   action: "Send Message",
                   href: whatsappUrl,
                 },
@@ -96,7 +111,7 @@ export default function ContactPage() {
 
             <div className="glass-card rounded-2xl p-8">
               <h2 className="text-xl font-semibold mb-6">Send Us a Message</h2>
-              <form className="space-y-4">
+              <form action="mailto:support@iptvadults.net" method="POST" encType="text/plain" className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -105,6 +120,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
+                      required
                       placeholder="Your name"
                       className="w-full h-12 px-4 rounded-xl bg-card border border-border text-foreground text-sm placeholder:text-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors"
                     />
@@ -116,6 +133,8 @@ export default function ContactPage() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
+                      required
                       placeholder="your@email.com"
                       className="w-full h-12 px-4 rounded-xl bg-card border border-border text-foreground text-sm placeholder:text-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors"
                     />
@@ -128,6 +147,8 @@ export default function ContactPage() {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
+                    required
                     placeholder="How can we help?"
                     className="w-full h-12 px-4 rounded-xl bg-card border border-border text-foreground text-sm placeholder:text-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors"
                   />
@@ -138,6 +159,8 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    required
                     rows={5}
                     placeholder="Tell us more about your inquiry..."
                     className="w-full px-4 py-3 rounded-xl bg-card border border-border text-foreground text-sm placeholder:text-muted focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors resize-none"

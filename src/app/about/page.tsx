@@ -13,6 +13,21 @@ export const metadata: Metadata = {
     description:
       "Discover the story behind iptv adult channels. A premium adult IPTV service with 26,000+ live channels, 100,000+ VOD titles, and enterprise-grade streaming infrastructure.",
     url: `${siteConfig.url}/about`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "About iptv adult channels premium IPTV provider",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About iptv adult channels — Premium IPTV Provider",
+    description:
+      "Discover the story behind iptv adult channels. A premium adult IPTV service with 26,000+ live channels, 100,000+ VOD titles.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/about`,
@@ -57,8 +72,8 @@ export default function AboutPage() {
 
             <div className="grid sm:grid-cols-3 gap-4 mt-12">
               {[
-                { value: "25,000+", label: "Live Channels" },
-                { value: "50,000+", label: "VOD Titles" },
+                { value: "26,000+", label: "Live Channels" },
+                { value: "100,000+", label: "VOD Titles" },
                 { value: "99.9%", label: "Uptime" },
               ].map((stat) => (
                 <div

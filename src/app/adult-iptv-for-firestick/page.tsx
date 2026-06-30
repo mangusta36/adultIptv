@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Set up adult IPTV on your Firestick with iptv adult channels. Easy Firestick setup with Downloader app. Full compatibility with all Amazon Fire TV devices. Subscribe and start today.",
     url: `${siteConfig.url}/adult-iptv-for-firestick`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — adult iptv for firestick" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV for Firestick — iptv adult channels Setup",
+    description: "Set up adult IPTV on your Firestick with iptv adult channels. Easy Firestick setup with Downloader app. Full compatibility with all Amazon Fire TV devices. Subscribe and start today.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/adult-iptv-for-firestick` },
 };

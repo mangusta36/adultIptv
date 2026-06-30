@@ -14,6 +14,21 @@ export const metadata: Metadata = {
     description:
       "Compare adult IPTV subscription plans from iptv adult channels. Starting at just $37 with flexible options. No contracts, no auto-renewal, 7-day guarantee. Subscribe to the best IPTV service today.",
     url: `${siteConfig.url}/pricing`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels subscription plans and pricing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iptv adult channels — Subscription Plans & Pricing",
+    description:
+      "Compare adult IPTV subscription plans from iptv adult channels. Starting at just $37 with flexible options. No contracts, no auto-renewal, 7-day guarantee.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/pricing`,

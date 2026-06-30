@@ -13,6 +13,21 @@ export const metadata: Metadata = {
     description:
       "Get a 24-hour IPTV trial for only $3. Enjoy full access to all premium IPTV channels before purchasing a subscription.",
     url: `${siteConfig.url}/trial`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "24-hour IPTV trial from iptv adult channels",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "24-Hour IPTV Trial | IPTV Adult Channels",
+    description:
+      "Get a 24-hour IPTV trial for only $3. Enjoy full access to all premium IPTV channels before purchasing a subscription.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/trial`,

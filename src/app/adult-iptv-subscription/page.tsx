@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Choose the best adult IPTV subscription plan from iptv adult channels. Flexible IPTV plans with no contracts, no auto-renewal, and instant setup. Subscribe today for 26,000+ live channels.",
     url: `${siteConfig.url}/adult-iptv-subscription`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — adult iptv subscription" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV Subscription — iptv adult channels Plans",
+    description: "Choose the best adult IPTV subscription plan from iptv adult channels. Flexible IPTV plans with no contracts, no auto-renewal, and instant setup. Subscribe today for 26,000+ live channels.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/adult-iptv-subscription` },
 };

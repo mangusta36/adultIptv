@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Experience buffer-free adult IPTV streaming in stunning HD, 4K & 8K. Anti-freeze technology ensures smooth playback. Subscribe to iptv adult channels for premium streaming today.",
     url: `${siteConfig.url}/adult-iptv-streaming`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — adult iptv streaming" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV Streaming — iptv adult channels HD & 4K",
+    description: "Experience buffer-free adult IPTV streaming in stunning HD, 4K & 8K. Anti-freeze technology ensures smooth playback. Subscribe to iptv adult channels for premium streaming today.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/adult-iptv-streaming` },
 };

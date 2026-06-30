@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     description:
       "iptv adult channels terms of service — review our service conditions, acceptable use policy, payment terms, and subscriber rights. Contact us with any questions.",
     url: `${siteConfig.url}/terms`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels terms and conditions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Terms — iptv adult channels Policies",
+    description:
+      "iptv adult channels terms of service — review our service conditions, acceptable use policy, payment terms, and subscriber rights.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/terms`,

@@ -28,7 +28,7 @@ export const heroDescription =
   "iptv adult channels delivers premium adult IPTV with 26,000+ live channels and 100,000+ VOD titles. Enjoy buffer-free HD, 4K, and 8K streaming on Firestick, Smart TV, Android, and iOS. Private, secure, and instant setup.";
 
 export const heroTrust = [
-  { value: "25000+", label: "Channels" },
+  { value: "26000+", label: "Channels" },
   { value: "4K / 8K", label: "Streaming" },
   { value: "99.9%", label: "Uptime" },
   { value: "24/7", label: "Support" },
@@ -85,8 +85,8 @@ export const devices = [
 ] as const;
 
 export const stats = [
-  { value: "25000+", suffix: "+", label: "Live Channels", num: 25000 },
-  { value: "50000+", suffix: "+", label: "VOD Titles", num: 50000 },
+  { value: "26000+", suffix: "+", label: "Live Channels", num: 26000 },
+  { value: "100000+", suffix: "+", label: "VOD Titles", num: 100000 },
   { value: "99.9%", suffix: "%", label: "Uptime Guarantee", num: 99.9 },
   { value: "24/7", suffix: "", label: "Expert Support", num: 24 },
 ] as const;

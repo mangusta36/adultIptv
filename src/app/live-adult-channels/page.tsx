@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Watch 26,000+ live adult channels in real time. 24/7 adult live TV streaming with zero buffering. Private and secure. Subscribe to iptv adult channels for the ultimate live experience.",
     url: `${siteConfig.url}/live-adult-channels`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — live adult channels" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Live Adult Channels — iptv adult channels 24/7 Streaming",
+    description: "Watch 26,000+ live adult channels in real time. 24/7 adult live TV streaming with zero buffering. Private and secure. Subscribe to iptv adult channels for the ultimate live experience.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/live-adult-channels` },
 };

@@ -26,7 +26,6 @@ const footerLinks = {
     { href: "/pricing", label: "3 Months" },
     { href: "/pricing", label: "6 Months" },
     { href: "/pricing", label: "12 Months" },
-    { href: "/pricing", label: "24 Months" },
   ],
 };
 

@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Explore the largest adult VOD library from iptv adult channels. 100,000+ adult on-demand titles in stunning quality. Daily updates, offline download, and instant streaming. Subscribe now.",
     url: `${siteConfig.url}/adult-vod-library`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — adult vod library" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult VOD Library — iptv adult channels 100K+ Titles",
+    description: "Explore the largest adult VOD library from iptv adult channels. 100,000+ adult on-demand titles in stunning quality. Daily updates, offline download, and instant streaming. Subscribe now.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/adult-vod-library` },
 };

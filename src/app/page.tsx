@@ -21,31 +21,28 @@ export const metadata: Metadata = {
     description:
       "Premium adult IPTV channels with 4K & 8K streaming. 26,000+ live channels, 100,000+ VOD library. Private, secure, buffer-free. Subscribe now.",
     url: siteConfig.url,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels premium IPTV streaming",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iptv adult channels — Premium Adult IPTV & Live Channels",
+    description:
+      "Premium adult IPTV channels with 4K & 8K streaming. 26,000+ live channels, 100,000+ VOD library. Private, secure, buffer-free.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: siteConfig.url },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "iptv adult channels",
-  url: siteConfig.url,
-  description: siteConfig.description,
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "iptv adult channels",
-  url: siteConfig.url,
-  description: siteConfig.description,
 };
 
 export default function Home() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <Hero />
       <Pricing />
       <ChannelShowcase />

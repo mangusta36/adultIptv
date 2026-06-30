@@ -15,6 +15,21 @@ export const metadata: Metadata = {
     description:
       "Need IPTV support? iptv adult channels offers 24/7 help center with setup guides, troubleshooting tips, and dedicated customer service via WhatsApp, email, and live chat.",
     url: `${siteConfig.url}/support`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels help center and support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "iptv adult channels — Help Center & Customer Service",
+    description:
+      "Need IPTV support? iptv adult channels offers 24/7 help center with setup guides, troubleshooting tips, and dedicated customer service.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/support`,

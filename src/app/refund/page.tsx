@@ -12,6 +12,21 @@ export const metadata: Metadata = {
     description:
       "Full 7-day money-back guarantee from iptv adult channels. No-risk IPTV subscription with hassle-free refunds. Read our refund policy and request a refund anytime within 7 days.",
     url: `${siteConfig.url}/refund`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels refund policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Refund Policy — iptv adult channels Guarantee",
+    description:
+      "Full 7-day money-back guarantee from iptv adult channels. No-risk IPTV subscription with hassle-free refunds. Read our refund policy.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/refund`,

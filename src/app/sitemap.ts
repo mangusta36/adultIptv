@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteConfig.url}/refund`, priority: 0.5 },
     { url: `${siteConfig.url}/installation-guide`, priority: 0.7 },
     { url: `${siteConfig.url}/channel-list`, priority: 0.7 },
+    { url: `${siteConfig.url}/trial`, priority: 0.7 },
   ];
 
   const blogPages = blogPosts.map((post) => ({

@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Experience true premium adult IPTV with Ultra HD 4K & 8K quality. Buffer-free streaming, global servers, and priority support. Subscribe to iptv adult channels for the best viewing experience.",
     url: `${siteConfig.url}/premium-adult-iptv`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — premium adult iptv" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Adult IPTV — iptv adult channels 4K & 8K",
+    description: "Experience true premium adult IPTV with Ultra HD 4K & 8K quality. Buffer-free streaming, global servers, and priority support. Subscribe to iptv adult channels for the best viewing experience.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: `${siteConfig.url}/premium-adult-iptv` },
 };

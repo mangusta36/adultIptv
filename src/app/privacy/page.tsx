@@ -11,6 +11,21 @@ export const metadata: Metadata = {
     description:
       "Your privacy matters. iptv adult channels uses encrypted streaming, no-logs policy, and discreet billing. Read our comprehensive privacy policy for secure adult IPTV streaming.",
     url: `${siteConfig.url}/privacy`,
+    images: [
+      {
+        url: `${siteConfig.url}/images/article-1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "iptv adult channels privacy policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV Privacy — iptv adult channels Policy",
+    description:
+      "Your privacy matters. iptv adult channels uses encrypted streaming, no-logs policy, and discreet billing.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/privacy`,

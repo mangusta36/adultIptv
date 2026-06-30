@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     description:
       "Follow the iptv adult channels installation guide to set up adult IPTV on Firestick, Smart TV, Android, iOS, PC, and Mac. Quick and easy setup instructions with 24/7 support.",
     url: `${siteConfig.url}/installation-guide`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — installation guide" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IPTV Installation Guide — iptv adult channels Setup",
+    description: "Follow the iptv adult channels installation guide to set up adult IPTV on Firestick, Smart TV, Android, iOS, PC, and Mac. Quick and easy setup instructions with 24/7 support.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/installation-guide`,

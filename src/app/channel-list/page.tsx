@@ -15,6 +15,13 @@ export const metadata: Metadata = {
     description:
       "Explore the full adult IPTV channel list from iptv adult channels. 26,000+ live channels across all categories in HD, 4K & 8K. Browse the complete channel guide and subscribe today.",
     url: `${siteConfig.url}/channel-list`,
+    images: [{ url: `${siteConfig.url}/images/article-1.jpg`, width: 1200, height: 630, alt: "iptv adult channels — channel list" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Adult IPTV Channel List — iptv adult channels Guide",
+    description: "Explore the full adult IPTV channel list from iptv adult channels. 26,000+ live channels across all categories in HD, 4K & 8K. Browse the complete channel guide and subscribe today.",
+    images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: {
     canonical: `${siteConfig.url}/channel-list`,
