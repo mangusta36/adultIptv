@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="md:hidden absolute inset-0">
           <Image
             src="/images/hero-bg-mobile.jpg"
-            alt="iptv adult channels premium streaming background"
+            alt="iptv adult channels best premium adult IPTV streaming service background"
             fill
             className="object-cover object-[85%_center]"
             priority
@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="hidden md:block absolute inset-0">
           <Image
             src="/images/hero-bg.jpg"
-            alt="iptv adult channels premium streaming background"
+            alt="iptv adult channels best premium adult IPTV streaming service background"
             fill
             className="object-cover object-center"
             priority

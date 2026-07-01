@@ -25,10 +25,10 @@ export default function SupportPreview() {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Need Help?
+            We're Here to Help
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Our support team and knowledge base are here to help you 24/7
+            Our expert support team and comprehensive knowledge base are available 24/7 to assist with your adult IPTV subscription
           </p>
         </div>
 

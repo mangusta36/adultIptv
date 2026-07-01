@@ -13,28 +13,28 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "iptv adult channels — Premium IPTV & Live TV in 4K & 8K",
+  title: "iptv adult channels — Best Adult IPTV Subscription: 26K+ Channels in 4K & 8K",
   description:
-    "iptv adult channels delivers premium adult IPTV with 26,000+ live channels and 100,000+ VOD titles. HD, 4K & 8K adult IPTV streaming on Firestick, Smart TV, Android & iOS. Private, buffer-free, instant setup.",
+    "iptv adult channels is the best adult IPTV subscription with 26,000+ live channels and 100,000+ VOD titles. HD, 4K & 8K streaming on Firestick, Smart TV, Android & iOS. Private, buffer-free, instant activation.",
   openGraph: {
-    title: "iptv adult channels — Premium Adult IPTV & Live Channels",
+    title: "iptv adult channels — Best Adult IPTV Subscription & Live Channels in 4K & 8K",
     description:
-      "Premium adult IPTV channels with 4K & 8K streaming. 26,000+ live channels, 100,000+ VOD library. Private, secure, buffer-free. Subscribe now.",
+      "Get the best adult IPTV subscription with 26,000+ live channels and 100,000+ VOD titles in 4K & 8K. Private, secure, buffer-free streaming on all devices. Subscribe now.",
     url: siteConfig.url,
     images: [
       {
         url: `${siteConfig.url}/images/article-1.jpg`,
         width: 1200,
         height: 630,
-        alt: "iptv adult channels premium IPTV streaming",
+        alt: "iptv adult channels best premium adult IPTV streaming service",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "iptv adult channels — Premium Adult IPTV & Live Channels",
+    title: "iptv adult channels — Best Adult IPTV Subscription & Live Channels",
     description:
-      "Premium adult IPTV channels with 4K & 8K streaming. 26,000+ live channels, 100,000+ VOD library. Private, secure, buffer-free.",
+      "Best adult IPTV subscription with 26,000+ live channels, 100,000+ VOD titles in 4K & 8K. Private, secure, buffer-free streaming. Instant setup.",
     images: [`${siteConfig.url}/images/article-1.jpg`],
   },
   alternates: { canonical: siteConfig.url },

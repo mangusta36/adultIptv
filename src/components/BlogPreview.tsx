@@ -22,10 +22,10 @@ export default function BlogPreview() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3">
-                Latest from Our Blog
+                Latest From Our IPTV Blog
               </h2>
               <p className="text-lg text-muted max-w-xl">
-                Tips, guides, and updates to get the most out of your IPTV experience
+                Expert guides, setup tips, streaming advice, and updates to get the most out of your adult IPTV subscription
               </p>
             </div>
             <Button variant="outline" asChild className="shrink-0">

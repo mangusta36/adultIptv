@@ -2,7 +2,7 @@ export const supportCategories = [
   {
     slug: "getting-started",
     name: "Getting Started",
-    description: "New to iptv adult channels? Start here with our beginner guides.",
+    description: "New to iptv adult channels? Start here with our beginner-friendly guides to adult IPTV, subscriptions, and setup basics.",
     icon: "Compass",
     articles: [
       { title: "What is IPTV? A Beginner's Guide", slug: "what-is-iptv" },
@@ -14,7 +14,7 @@ export const supportCategories = [
   {
     slug: "installation",
     name: "Installation Guides",
-    description: "Step-by-step iptv adult channels setup guides for all devices.",
+    description: "Step-by-step iptv adult channels setup guides for Firestick, Smart TV, Android, iOS, PC, and Mac.",
     icon: "Download",
     articles: [
       { title: "Firestick Installation Guide", slug: "firestick-setup" },
@@ -27,7 +27,7 @@ export const supportCategories = [
   {
     slug: "troubleshooting",
     name: "Troubleshooting",
-    description: "Fix common iptv adult channels issues and optimize performance.",
+    description: "Fix common adult IPTV issues like buffering, connection drops, audio sync, and optimize your streaming performance.",
     icon: "Wrench",
     articles: [
       { title: "Buffering Issues and Fixes", slug: "fix-buffering" },
@@ -40,7 +40,7 @@ export const supportCategories = [
   {
     slug: "account",
     name: "Account & Billing",
-    description: "Manage your iptv adult channels subscription and account settings.",
+    description: "Manage your iptv adult channels subscription, renewals, password, refunds, and account settings in one place.",
     icon: "User",
     articles: [
       { title: "How to Renew Your Subscription", slug: "renew-subscription" },

@@ -13,12 +13,13 @@ export default function CTA() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6">
             Start Your Premium Adult IPTV
             <br />
-            Experience With iptv adult channels
+            Subscription With iptv adult channels
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto mb-10">
-            Join thousands of satisfied subscribers and get instant access to
-            premium adult IPTV channels, live adult TV, and the largest VOD library —
-            all in HD, 4K, and 8K with full privacy.
+            Join thousands of satisfied subscribers worldwide. Get instant access
+            to 26,000+ premium adult IPTV channels, live adult TV from every
+            continent, and the largest VOD library with 100,000+ titles — all in
+            HD, 4K, and 8K with complete privacy protection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="xl" asChild>

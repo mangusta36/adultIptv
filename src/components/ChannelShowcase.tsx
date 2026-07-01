@@ -91,14 +91,17 @@ export default function ChannelShowcase() {
       <div className="relative z-10">
         <div className="container text-center mb-14 md:mb-18">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider mb-5">
-            Channel Lineup
+            Premium Channel Lineup
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Premium Adult Channels Included
+            Premium Adult Channels Included in Every Plan
           </h2>
           <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto">
-            Access the world&apos;s most popular premium adult channels with
-            crystal-clear HD, FHD, and 4K streaming quality.
+            Access the world&apos;s most popular premium adult channels — all included
+            with your subscription. From top-tier networks to exclusive international
+            content, every channel streams in crystal-clear HD, FHD, or 4K quality.
+            Our lineup covers every major category and is updated regularly with new
+            additions based on subscriber requests.
           </p>
         </div>
 

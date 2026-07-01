@@ -26,10 +26,10 @@ export default function Features() {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Premium Features
+            Premium IPTV Features You'll Love
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Everything you need for the ultimate streaming experience
+            From buffer-free 4K streaming to 24/7 support — everything you need for the ultimate adult IPTV experience
           </p>
         </div>
 

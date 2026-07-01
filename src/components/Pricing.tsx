@@ -1,4 +1,4 @@
-import { plans } from "@/data";
+import { plans, trialPlan } from "@/data";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Zap, CreditCard } from "lucide-react";
 
@@ -6,9 +6,9 @@ const waMsg = (name: string, price: string) =>
   `https://wa.me/447828714977?text=${encodeURIComponent(`Hi! I'd like to buy the ${name} IPTV plan for ${price}.`)}`;
 
 const badges = [
-  { icon: Shield, label: "Money Back Guarantee", desc: "7-day full refund" },
-  { icon: Zap, label: "Instant Activation", desc: "Setup in under 5 min" },
-  { icon: CreditCard, label: "Secure Payment", desc: "Encrypted checkout" },
+  { icon: Shield, label: "Money-Back Guarantee", desc: "7-day full refund, no questions asked" },
+  { icon: Zap, label: "Instant Activation", desc: "Start streaming in under 5 minutes" },
+  { icon: CreditCard, label: "Secure Payment", desc: "Encrypted checkout, discreet billing" },
 ];
 
 export default function Pricing() {
@@ -21,13 +21,13 @@ export default function Pricing() {
       <div className="container relative z-10">
         <div className="text-center mb-12 md:mb-16">
           <span className="inline-flex items-center px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-wider mb-5">
-            Pricing
+            Subscription Plans
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Choose Your Plan
+            Choose Your Adult IPTV Plan
           </h2>
           <p className="text-base sm:text-lg text-muted max-w-xl mx-auto">
-            All plans include the same premium features. Pick the duration that fits you best.
+            All plans include the same premium adult IPTV features. Pick the subscription duration that fits your needs and budget best.
           </p>
         </div>
 
@@ -98,6 +98,55 @@ export default function Pricing() {
               </Button>
             </div>
           ))}
+        </div>
+
+        <div className="max-w-md mx-auto mt-10 md:mt-16 mb-10 md:mb-14">
+          <div className="relative flex flex-col rounded-2xl border border-violet-500/40 bg-gradient-to-b from-violet-500/10 to-violet-500/5 p-6 md:p-8 text-center shadow-[0_0_80px_rgba(168,85,247,0.12)]">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold bg-violet-600 text-white shadow-lg shadow-violet-600/30 tracking-wider uppercase">
+                Risk-Free Trial
+              </span>
+            </div>
+
+            <div className="mb-5 mt-3">
+              <h3 className="text-xl font-bold mb-1">{trialPlan.name}</h3>
+              <p className="text-sm text-muted">{trialPlan.description}</p>
+            </div>
+
+            <div className="mb-6 pb-6 border-b border-violet-500/20">
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-4xl md:text-5xl font-bold tracking-tight text-violet-400">{trialPlan.price}</span>
+                <span className="text-sm text-muted">{trialPlan.period}</span>
+              </div>
+              <div className="text-xs text-muted mt-1">Full access, no strings attached</div>
+            </div>
+
+            <ul className="space-y-3 mb-8 flex-1 text-left">
+              {trialPlan.features.map((feature) => (
+                <li key={feature} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-violet-500/20 border border-violet-500/30 flex items-center justify-center shrink-0 mt-0.5">
+                    <Check className="w-3 h-3 text-violet-400" />
+                  </div>
+                  <span className="text-sm text-foreground/90">{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Button
+              variant="default"
+              size="lg"
+              className="w-full font-semibold bg-violet-600 hover:bg-violet-700 shadow-lg shadow-violet-600/25"
+              asChild
+            >
+              <a
+                href={`https://wa.me/447828714977?text=${encodeURIComponent(`Hi! I'd like to try the 24-Hour Trial for $3.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {trialPlan.cta}
+              </a>
+            </Button>
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mt-10 md:mt-14">

@@ -190,7 +190,7 @@ export default function Header() {
 
             <div className="absolute bottom-6 left-0 right-0 px-6">
               <p className="text-xs text-muted/50 text-center">
-                iptv adult channels — premium streaming
+                iptv adult channels — best premium adult IPTV subscription
               </p>
             </div>
           </div>

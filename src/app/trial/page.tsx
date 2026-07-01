@@ -63,7 +63,7 @@ const trustItems = [
   { icon: HeadphonesIcon, label: "Fast customer support" },
 ];
 
-const trialWhatsappUrl = `https://wa.me/447828714977?text=${encodeURIComponent("Hi! I'd like to buy the 24-hour IPTV trial for $3.")}`;
+const trialWhatsappUrl = `https://wa.me/447828714977?text=${encodeURIComponent("Hi! I'd like to try the 24-Hour Trial for $3.")}`;
 
 export default function TrialPage() {
   return (
@@ -173,7 +173,7 @@ export default function TrialPage() {
 
               <Button size="xl" className="w-full font-semibold" asChild>
                 <a
-                  href={whatsappUrl}
+                  href={trialWhatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2"

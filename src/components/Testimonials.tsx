@@ -15,10 +15,10 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Trusted by Thousands
+            Trusted by Thousands of Subscribers
           </h2>
           <p className="text-base sm:text-lg text-muted max-w-xl mx-auto">
-            See what our subscribers say about their experience
+            Real reviews from real customers who love their adult IPTV subscription
           </p>
         </div>
 

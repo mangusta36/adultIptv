@@ -14,10 +14,10 @@ export default function Devices() {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Works on Every Device
+            Works on All Your Devices
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Stream seamlessly across all your favorite devices
+            Stream adult IPTV seamlessly across Firestick, Smart TV, Android, iPhone, Tablet, PC, and Mac
           </p>
         </div>
 
